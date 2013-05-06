@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Socket</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/angular.js"></script>
+    <script src="/javascripts/app.js"></script>
+</head>
+<body ng-controller="socketCtrl">
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Description</td>
+                <!--<td><a href="/new">New</a></td>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in enterpriseCrew">
+                <td>{{person.name}}</td>
+                <td>{{person.description}}</td>
+                <!--<td><a href="/edit/{{$index}}">Edit</a></td>-->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
