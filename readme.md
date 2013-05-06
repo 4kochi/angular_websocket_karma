@@ -20,7 +20,7 @@ node app.js
 
 ### Run the e2e test in the browser
 
-http://localhost:3000/test
+[http://localhost:3000/test](http://localhost:3000/test)
 
 ### Run the e2e test fom grunt
 
