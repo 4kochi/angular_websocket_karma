@@ -30,7 +30,7 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 var server = http.createServer(app).listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
+    console.log('Express server listening on port ' + app.get('port') + ' in mode ' + app.get('env'));
 });
 
 var io = require('socket.io').listen(server);
@@ -49,13 +49,23 @@ app.get('/test', function (req, res) {
     res.render('runner');
 });
 
-//io.set('transports', [
+//io.configure('development', function(){
+//    io.set('transports', [
+////        'websocket',
+////        'flashsocket',
+////        'htmlfile',
+//        'xhr-polling',
+//        'jsonp-polling'
+//    ]);
+//});
+
+io.set('transports', [
 //    'websocket',
 //    'flashsocket',
 //    'htmlfile',
-//    'xhr-polling',
-//    'jsonp-polling'
-//]);
+    'xhr-polling',
+    'jsonp-polling'
+]);
 
 io.sockets.on('connection', function (socket) {
     socket.on('getAll', function (data, callback) {
