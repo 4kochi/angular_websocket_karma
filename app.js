@@ -49,6 +49,14 @@ app.get('/test', function (req, res) {
     res.render('runner');
 });
 
+//io.set('transports', [
+//    'websocket',
+//    'flashsocket',
+//    'htmlfile',
+//    'xhr-polling',
+//    'jsonp-polling'
+//]);
+
 io.sockets.on('connection', function (socket) {
     socket.on('getAll', function (data, callback) {
         console.log('getAll')

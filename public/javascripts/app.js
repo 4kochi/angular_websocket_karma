@@ -1,5 +1,3 @@
-var socket = io.connect('http://localhost');
-
 /*global angular*/
 angular.module('app', [])
     .factory('socket', function ($rootScope) {

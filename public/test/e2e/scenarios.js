@@ -4,7 +4,7 @@ describe('Demo app', function () {
     it('should show data', function () {
         browser().navigateTo('/index');
 
-        sleep(1);
+        sleep(3);
 
         expect(repeater('table tbody tr').count()).toBe(3);
     });
@@ -12,7 +12,7 @@ describe('Demo app', function () {
     it('should show data from socket', function () {
         browser().navigateTo('/socket');
 
-        sleep(2);
+        sleep(3);
 
         expect(repeater('table tbody tr').count()).toBe(4);
     });
