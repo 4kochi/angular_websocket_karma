@@ -27,11 +27,3 @@ node app.js
 ```bash
 grunt
 ```
-
-* `{Object}` __query__ - The query.
-* `{Object}` __update__ - The data to update.
-* `{function(err, res)}` __callback__ - The callback function.
-
-* __query__ `{Object}` The query.
-* __update__ `{Object}` The data to update.
-* __callback__ `{function(err, res)}` The callback function.
